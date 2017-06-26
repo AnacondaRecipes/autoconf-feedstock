@@ -7,21 +7,24 @@ package:
   version: {{ version }}
 
 source:
-  fn: autoconf-{{ version }}.tar.gz
+  # Please keep these lines around. They are used to rebase the patches
+  # easily. Unfortunately, autoconf requires autotools to build itself.
+  # git_url: http://git.sv.gnu.org/r/autoconf.git
+  # git_tag: v2.69
   url: http://ftp.gnu.org/gnu/autoconf/autoconf-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    - shebang.patch
-    # This patch fixes "503: autoscan" test failure.
-    # From http://lists.gnu.org/archive/html/bug-autoconf/2013-01/msg00060.html
-    - autoscan-fix.patch
+    - 0001-autoscan-port-to-perl-5.17.patch
+    - 0002-tests-avoid-spurious-test-failure-with-libtool-2.4.3.patch
+    - 0003-Patch-shebang.patch
+    - 0004-Add-use-lib-.-to-auto-scan-header-.in.patch
 
 build:
-  number: {{ build }}
-  skip: true  # [win]
+  number: 5
+  skip: True  # [win]
 
 requirements:
-  build:
+  host:
     - m4
     - perl
   run:
@@ -32,7 +35,7 @@ test:
   commands:
     - autoconf --help
     - conda inspect linkages -p $PREFIX autoconf  # [not win]
-    - conda inspect objects -p $PREFIX autoconf  # [osx]
+    - conda inspect objects -p $PREFIX autoconf   # [osx]
 
 about:
   home: http://www.gnu.org/software/autoconf/
@@ -45,3 +48,4 @@ extra:
   recipe-maintainers:
     - jakirkham
     - ocefpaf
+    - mingwandroid
