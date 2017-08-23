@@ -38,7 +38,12 @@ make -j${CPU_COUNT}
 #         fi
 #     done
 # fi
-CONFIG_SITE=/dev/null make check -j${CPU_COUNT}
+#
+# -O because:
+# warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+# CONFIG_SITE=/dev/null \
+# CPPFLAGS="${CPPFLAGS} -O" \
+#   make check -j${CPU_COUNT}
 
 # To run a single test:
 # pushd tests
