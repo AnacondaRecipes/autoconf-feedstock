@@ -4,7 +4,7 @@
             --libdir=${PREFIX}/lib    \
             PERL='/usr/bin/env perl'
 
-make -j${CPU_COUNT}
+make -j${CPU_COUNT} ${VERBOSE_AT}
 # If CONFIG_SITE is not specified, it will pick up your system's default one
 # and if you are running a 64-bit system that uses /usr/lib64, then test 231
 # in base.at, called "configure directories" will fail since it is hardcoded
