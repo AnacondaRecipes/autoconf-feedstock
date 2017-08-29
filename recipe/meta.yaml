@@ -48,6 +48,13 @@ about:
   license_family: GPL
   license_file: COPYING
   summary: 'Extensible M4 macros that produce shell scripts to configure software source code packages.'
+  description: |
+    Autoconf is a tool for producing shell scripts that automatically configure
+    software source code packages to adapt to many kinds of Posix-like systems.
+    The configuration scripts produced by Autoconf are independent of Autoconf
+    when they are run, so their users do not need to have Autoconf.
+  doc_url: https://www.gnu.org/software/autoconf/manual/autoconf.html
+  dev_url: http://git.sv.gnu.org/r/autoconf.git
 
 extra:
   recipe-maintainers:
