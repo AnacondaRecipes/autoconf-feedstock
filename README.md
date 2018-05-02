@@ -9,19 +9,25 @@ Feedstock license: BSD 3-Clause
 
 Summary: Extensible M4 macros that produce shell scripts to configure software source code packages.
 
+Autoconf is a tool for producing shell scripts that automatically configure
+software source code packages to adapt to many kinds of Posix-like systems.
+The configuration scripts produced by Autoconf are independent of Autoconf
+when they are run, so their users do not need to have Autoconf.
 
 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/autoconf-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/autoconf-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/autoconf-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/autoconf-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
+![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/autoconf/badges/version.svg)](https://anaconda.org/conda-forge/autoconf)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/autoconf/badges/downloads.svg)](https://anaconda.org/conda-forge/autoconf)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-autoconf-green.svg)](https://anaconda.org/conda-forge/autoconf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/autoconf.svg)](https://anaconda.org/conda-forge/autoconf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/autoconf.svg)](https://anaconda.org/conda-forge/autoconf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/autoconf.svg)](https://anaconda.org/conda-forge/autoconf) |
 
 Installing autoconf
 ===================
@@ -66,6 +72,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
