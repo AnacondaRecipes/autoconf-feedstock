@@ -29,6 +29,7 @@ requirements:
     - {{ compiler('c') }}
   build:
     #  make check requirement:
+    - make
     - libtool
   run:
     - m4
