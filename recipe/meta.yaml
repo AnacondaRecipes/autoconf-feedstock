@@ -31,6 +31,8 @@ requirements:
     #  make check requirement:
     - make
     - libtool
+    - patch     # [not win]
+    - m2-patch  # [win]
   run:
     - m4
     - perl
