@@ -33,8 +33,10 @@ requirements:
 
 test:
   requires:
+  # For conda inspect command
     - conda-build  # [osx]
   commands:
+    - autoconf --version
     - autoconf --help
     - conda inspect linkages -p $PREFIX autoconf  # [not win]
     - conda inspect objects -p $PREFIX autoconf   # [osx]
