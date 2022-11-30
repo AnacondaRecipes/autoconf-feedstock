@@ -32,6 +32,8 @@ requirements:
     - perl 5.*
 
 test:
+  requires:
+    - conda-build  # [osx]
   commands:
     - autoconf --help
     - conda inspect linkages -p $PREFIX autoconf  # [not win]

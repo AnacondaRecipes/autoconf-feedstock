@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 ./configure --prefix=${PREFIX}        \
             --libdir=${PREFIX}/lib    \
             --build=${BUILD}          \
