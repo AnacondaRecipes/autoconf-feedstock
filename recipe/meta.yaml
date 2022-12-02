@@ -60,3 +60,5 @@ extra:
     - jakirkham
     - ocefpaf
     - mingwandroid
+  skip-lints:
+    - compilers_must_be_in_build
