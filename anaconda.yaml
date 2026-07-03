@@ -1,5 +1,5 @@
 anaconda_config_version: 1
 upstream_sources:
   - webpage:
-      url: https://ftpmirror.gnu.org/autoconf/
-      regex: autoconf-([\d.]+)\.tar\.gz
+      url: https://ftp.gnu.org/gnu/autoconf/
+      regex: autoconf-([\d.]+)\.tar\.xz
